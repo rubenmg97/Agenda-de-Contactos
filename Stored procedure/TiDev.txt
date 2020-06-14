@@ -1,0 +1,8 @@
+
+select   (CONVERT(Date, CONVERT(VarChar(4), Year(Getdate()))))
+
+select * from contacto where Nacimiento =convert(varchar, getdate(), 111)
+
+update contacto set nacimiento ='2020/06/07' where id=1
+
+select * from contacto where MONTH(Nacimiento) = MONTH(GETDATE()) and Day(Nacimiento) = Day(GetDate()) and Nombre ='{nombre}'

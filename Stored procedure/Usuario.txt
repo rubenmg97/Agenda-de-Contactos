@@ -1,0 +1,94 @@
+------------------------------Usuario------------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Datos de Tabla Usuario 
+create proc spObtenerUsuarios
+as
+begin
+select Usuario.Id, Usuario.Nombre, Usuario.Paterno, Usuario.Materno, Usuario.NomUsuario, Usuario.Nacimiento, Usuario.Edad, Usuario.Correo, Usuario.PasswordU, Usuario.Facebook, Usuario.Linkedin, Usuario.NomFoto from Usuario
+end
+------------------------------Usuario Id--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Usuario por Id
+create proc spObtenerUsuarioId (@Id int)
+as
+begin
+select Usuario.Id, Usuario.Nombre, Usuario.Paterno, Usuario.Materno, Usuario.NomUsuario, Usuario.Nacimiento, Usuario.Edad, Usuario.Correo, Usuario.PasswordU, Usuario.Facebook, Usuario.Linkedin, Usuario.NomFoto from Usuario 
+where Usuario.Id=@Id
+end
+-----------------------------Validar Usuario --------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Usuario 
+create proc spValidarUsuario(@NomUsuario varchar(50),@PasswordU varchar(50))
+as
+begin
+select Usuario.Id, Usuario.Nombre, Usuario.Paterno, Usuario.Materno, Usuario.NomUsuario, Usuario.Nacimiento, Usuario.Edad, Usuario.Correo, Usuario.PasswordU, Usuario.Facebook, Usuario.Linkedin, Usuario.NomFoto from Usuario 
+where Usuario.NomUsuario = @NomUsuario and Usuario.PasswordU = @PasswordU
+end 
+-------------------------Borrar Usuario--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Borrar Usuario
+create proc spDeleteUsuario (@Id int)
+as
+begin
+delete from Usuario where Usuario.Id = @Id
+end 
+-------------------------Crear Usuario--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Crear usuario
+create proc spCreateUsuario (@Nombre varchar(50), @Paterno varchar(50), @Materno varchar(50),@NombreFoto varchar(50), @Nacimiento datetime, @Correo varchar(100), @NomUsuario varchar(50), @PasswordU varchar(50), @Facebook varchar(500), @Linkedin varchar(500))
+as
+begin
+insert into Usuario values (@Nombre,@Paterno,@Materno,@NomUsuario,@Nacimiento,(Select DATEDIFF(YEAR,@Nacimiento,GETDATE())-(CASE WHEN DATEADD(YY,DATEDIFF(YEAR,@Nacimiento,GETDATE()),@Nacimiento)>GETDATE() THEN   1 ELSE 0 END)),@Correo,@PasswordU,@Facebook,@Linkedin,@NombreFoto);
+end
+-------------------------Editar Usuario--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Editar Usuario
+create proc spEditUsuario (@Id int,@Nombre varchar(50), @Paterno varchar(50), @Materno varchar(50),@NombreFoto varchar(50), @Nacimiento datetime, @Correo varchar(100), @NomUsuario varchar(50), @PasswordU varchar(50), @Facebook varchar(500), @Linkedin varchar(500))
+as
+begin
+update Usuario set Usuario.Nombre=@Nombre,Usuario.Paterno=@Paterno,Usuario.Materno=@Materno,Usuario.Nacimiento=@Nacimiento,Usuario.Correo=@Correo,Usuario.NomUsuario=@NomUsuario,Usuario.PasswordU=@PasswordU,Usuario.Facebook=@Facebook,Usuario.Linkedin=@Linkedin,Usuario.Edad=(Select DATEDIFF(YEAR,@Nacimiento,GETDATE())-(CASE WHEN DATEADD(YY,DATEDIFF(YEAR,@Nacimiento,GETDATE()),@Nacimiento)>GETDATE() THEN   1 ELSE 0 END)),Usuario.NomFoto=@NombreFoto where usuario.Id =@Id
+end
+----------------------- Usuario Existente Nombres----------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Usuario Existente
+create proc spUsuarioExistentePorNombre (@Nombre varchar(50),@Paterno varchar(50),@Materno varchar(50),@NomUsuario varchar(50))
+as
+begin
+select Usuario.Id, Usuario.Nombre, Usuario.Paterno, Usuario.Materno, Usuario.NomUsuario, Usuario.Nacimiento, Usuario.Edad, Usuario.Correo, Usuario.PasswordU, Usuario.Facebook, Usuario.Linkedin, Usuario.NomFoto From Usuario
+where Usuario.Nombre = @Nombre and Usuario.Paterno = @Paterno and Usuario.Materno = @Materno
+end 
+----------------------- Usuario Existente User Name ----------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Usuario Existente
+create proc spUsuarioExistentePorUsuario (@Nombre varchar(50),@Paterno varchar(50),@Materno varchar(50),@NomUsuario varchar(50))
+as
+begin
+select Usuario.Id, Usuario.Nombre, Usuario.Paterno, Usuario.Materno, Usuario.NomUsuario, Usuario.Nacimiento, Usuario.Edad, Usuario.Correo, Usuario.PasswordU, Usuario.Facebook, Usuario.Linkedin, Usuario.NomFoto From Usuario
+where Usuario.NomUsuario =@NomUsuario
+end 
+----------------------- Usuario User Name----------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Usuario por user name
+create proc SpObtenerNomUsuario (@NomUsuario varchar(50))
+as
+begin
+select Usuario.Id, Usuario.Nombre, Usuario.Paterno, Usuario.Materno, Usuario.NomUsuario, Usuario.Nacimiento, Usuario.Edad, Usuario.Correo, Usuario.PasswordU, Usuario.Facebook, Usuario.Linkedin, Usuario.NomFoto From Usuario
+where Usuario.NomUsuario =@NomUsuario
+end 
+-----------------------------------------------------------------------
+spObtenerUsuarios
+spObtenerUsuarioId 1
+spValidarUsuario 'rubenmg','12345'
+spDeleteUsuario 1004
+spCreateUsuario 'Ruben','Mancilla','Garcia','rubenmg','20120618','ruben._.mg97@hotmail.com','12345','F','L',23
+spEditUsuario 1005,'Ruben','Mancilla','Gatell','12345','20120618','ruben._.mg97@hotmail.com','toro','F','L',23
+spUsuarioExistente 'Ruben','Mancilla','lop','mojo'

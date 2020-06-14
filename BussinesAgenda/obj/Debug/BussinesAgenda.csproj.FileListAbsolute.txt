@@ -1,0 +1,20 @@
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\BussinesAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\BussinesAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\DataAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\EntityAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\DataAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\EntityAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.csprojResolveAssemblyReference.cache
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\BussinesAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\BussinesAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\DataAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\EntityAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\DataAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\bin\Debug\EntityAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.csprojAssemblyReference.cache
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.csproj.CoreCompileInputs.cache
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.csproj.CopyComplete
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\BussinesAgenda\obj\Debug\BussinesAgenda.pdb

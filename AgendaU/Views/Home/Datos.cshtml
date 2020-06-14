@@ -1,0 +1,156 @@
+﻿@model IEnumerable<TiDev.Entity.Agenda.EntDatosContacto>
+@using TiDev.Entity.Agenda; 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Datos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+</head>
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <article id="header">
+
+            <!-- Logo -->
+            <h1>Mis Contactos </h1>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li class="current"><a href="/Home/Login">Login</a></li>
+                    <li>
+                        <a href="#">Dropdown</a>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Magna phasellus</a></li>
+                            <li><a href="#">Etiam dolore nisl</a></li>
+                            <li>
+                                <a href="#">Phasellus consequat</a>
+                                <ul>
+                                    <li><a href="#">Magna phasellus</a></li>
+                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                    <li><a href="#">Veroeros feugiat</a></li>
+                                    <li><a href="#">Nisl sed aliquam</a></li>
+                                    <li><a href="#">Dolore adipiscing</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Veroeros feugiat</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                    <li class="current"><a href="/Home/Cerrar">Salir</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" name="valor" type="search" placeholder="Nombre Contacto" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"formaction="/Home/Buscar" formmethod="get"> Buscar </button>
+                </form>
+            </nav>
+
+
+            <!-- contactos -->
+            <section id="intro" class="container">
+                <section>
+                    <div class="col-4 col-12-medium">
+                        <table class="table">
+                            <tr>
+                                <th>
+                                    &nbsp;
+                                    @if (TempData["error"] != null)
+                                    {
+                                        <h2 class="alert-danger"> @TempData["error"]</h2>
+                                    }
+                                    &nbsp;
+                                    @if (TempData["resultado"] != null)
+                                    {
+                                        <h2 class="alert-danger"> @TempData["resultado"]</h2>
+                                    }
+                                </th>
+                                <th> </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <section />
+                    <header>
+                        @foreach (var item in Model)
+                        {
+                            <table>
+                                <tr>
+                                    <th hidden> Imagen </th>
+                                    <th hidden> Datos </th>
+                                    <th hidden> Cumpleaños </th>
+                                    <th hidden> Modificar/Borrar Contacto</th>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        <img src="~/Imagenes/@item.Contacto.NomFoto" style="width:100px" alt="Alternate Text" />
+                                    </th>
+                                    <th>
+                                        <ul>
+                                            <li> <b> Nombre: </b>   @item.Contacto.NombreCompleto </li>
+                                            <li> <b> Edad: </b>  @item.Contacto.Edad </li>
+
+                                            @foreach (@EntReferencia r in @item.Referencias)
+                                            {
+                                                <li>
+                                                    <b>@r.Tipo.Nombre</b> @r.Dato  -
+                                                    @Html.ActionLink("Editar", "EditR", new { id = r.Id }) |
+                                                    @Html.ActionLink("Borrar", "DeleteR", new { id = r.Id })
+                                                </li>
+
+                                            }
+                                        </ul>
+
+                                        @*@Session["contacto"] = @item.Contacto;
+                                    @Html.ActionLink("Nueva Referencia", "CreateR")*@
+
+                                    </th>
+                                    <th>
+                                        @if (item.Contacto.Cumpleaños)
+                                        {
+                                            <img src="~/Imagenes/happy birthday.jpg" style="width:100px" alt="Alternate Text" />
+                                        }
+                                    </th>
+                                    <th>
+                                        @Html.ActionLink("Editar", "EditC", new { id = item.Contacto.Id }) |
+                                        @Html.ActionLink("Borrar", "DeleteC", new { id = item.Contacto.Id })
+                                    </th>
+                                </tr>
+                            </table>
+                        }
+                    </header>
+                </section>
+            </section>
+</div>
+    <form>
+        <p>
+            <center><input type="submit" class="btn btn-success" value="Nuevo Contacto" formaction="/Home/CreateC" formmethod="get" /></center>
+        </p>
+    </form>
+    <!-- Scripts -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.dropotron.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

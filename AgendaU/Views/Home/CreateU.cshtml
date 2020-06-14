@@ -1,0 +1,199 @@
+﻿@model TiDev.Entity.Agenda.EntUsuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CreateU</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+</head>
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <section id="header">
+
+            <!-- Logo -->
+            <h1><a href="/Home/Login">Agenda En Linea</a></h1>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li class="current"><a href="/Home/Login">Login</a></li>
+                    <li>
+                        <a href="#">Dropdown</a>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Magna phasellus</a></li>
+                            <li><a href="#">Etiam dolore nisl</a></li>
+                            <li>
+                                <a href="#">Phasellus consequat</a>
+                                <ul>
+                                    <li><a href="#">Magna phasellus</a></li>
+                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                    <li><a href="#">Veroeros feugiat</a></li>
+                                    <li><a href="#">Nisl sed aliquam</a></li>
+                                    <li><a href="#">Dolore adipiscing</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Veroeros feugiat</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                    <li><a href="no-sidebar.html">No Sidebar</a></li>
+                </ul>
+            </nav>
+
+            <!-- Banner -->
+            <section id="banner">
+                <header>
+                    <h2>Nuevo Usuario</h2>
+                    <p>
+                        &nbsp;
+                        @if (TempData["error"] != null)
+                        {
+                            <h2 class="alert-danger"> @TempData["error"]</h2>
+                        }
+                        &nbsp;
+                        @if (TempData["Resultado"] != null)
+                        {
+                            <h2 class="alert-success"> @TempData["resultado"]</h2>
+                        }
+                    </p>
+                    <form enctype="multipart/form-data">
+                        <table>
+                            <tr>
+                                <th>
+                                    <center> Nombre </center>
+                                </th>
+                                <th>
+                                    @*@Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control",  placeholder="Ingresar Nombre" } })*@
+                                    <input type="text" name="Nombre" value="" class="form-control" placeholder="Escribe tu(s) nombre(s)" />
+                                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Paterno </center>
+                                </th>
+                                <th>
+                                    <input type="text" name="Paterno" value="" class="form-control" placeholder="Escribe tu(s) A-Paternos(s)" />
+                                    @Html.ValidationMessageFor(model => model.Paterno, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Materno </center>
+                                </th>
+                                <th>
+                                    <input type="text" name="Materno" value="" class="form-control" placeholder="Escribe tu(s) A-Materno(s)" />
+                                    @Html.ValidationMessageFor(model => model.Materno, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Nombre de Usuario </center>
+                                </th>
+                                <th>
+                                    <input type="text" name="NomUsuario" value="" class="form-control" placeholder="Nombre de Usuario" />
+                                    @Html.ValidationMessageFor(model => model.NomUsuario, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Nacimiento </center>
+                                </th>
+                                <th>
+                                    <input type="date" name="Nacimiento" value="" class="form-control" />
+                                    @Html.ValidationMessageFor(model => model.Nacimiento, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Correo </center>
+                                </th>
+                                <th>
+                                    <input type="text" name="Correo" value="" class="form-control" placeholder="Correo" />
+                                    @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Password </center>
+                                </th>
+                                <th>
+                                    <input type="password" name="Password" value="" class="form-control" placeholder="Password" />
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Facebook </center>
+                                </th>
+                                <th>
+                                    <input type="text" name="Facebook" value="" class="form-control" placeholder="Link Facebook" />
+                                    @Html.ValidationMessageFor(model => model.Facebook, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center> Linkedin </center>
+                                </th>
+                                <th>
+                                    <input type="text" name="Linkedin" value="" class="form-control" placeholder="Link Linkedin" />
+                                    @Html.ValidationMessageFor(model => model.Linkedin, "", new { @class = "text-danger" })
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <center><label for="file">File:</label></center>
+                                </th>
+                                <th>
+                                    <input type="file" name="NomFoto" />
+                                </th>
+                            </tr>
+
+                            <tr class="alert-success">
+                                <th>
+                                    <center>
+                                        <input type="submit" name="name" class="button alt large" value="Inicio" formaction="/Home/Login" formmethod="get" />
+                                    </center>
+                                </th>
+                                <th>
+                                    <center>
+                                        <input type="submit" name="name" class="btn btn-outline-success" value="Guardar" formmethod="post"  />
+                                    </center>
+                                </th>
+                            </tr>
+                        </table>
+                    </form>
+                </header>
+                <section>
+                    <h2>Contactanos</h2>
+                    <ul class="social">
+                        <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+                        <li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                        <li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+                        <li><a class="icon brands fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
+                        <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.dropotron.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+</html>

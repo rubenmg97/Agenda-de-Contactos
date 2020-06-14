@@ -1,0 +1,52 @@
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\csc.exe
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\vbc.exe
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\VBCSCompiler.exe
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\AgendaU.dll.config
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\AgendaU.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\AgendaU.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\BussinesAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\EntityAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\DataAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\BussinesAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\EntityAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\bin\DataAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.csprojResolveAssemblyReference.cache
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\csc.exe
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\vbc.exe
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\VBCSCompiler.exe
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\AgendaU.dll.config
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\AgendaU.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\AgendaU.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\BussinesAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\EntityAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\DataAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\BussinesAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\EntityAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\bin\DataAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.csprojAssemblyReference.cache
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.csproj.CoreCompileInputs.cache
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.csproj.CopyComplete
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\AgendaU\obj\Debug\AgendaU.pdb

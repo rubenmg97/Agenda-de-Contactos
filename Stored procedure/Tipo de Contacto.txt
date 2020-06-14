@@ -1,0 +1,52 @@
+-------------------------Obtener Tipo--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tipo de Contacto 
+create procedure spObtenerTipo
+as
+begin
+select TipoContacto.Id, TipoContacto.Nombre, TipoContacto.Estado from TipoContacto
+end
+-------------------------Obtener Tipo--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla TipoDeContacto 
+create procedure spObtenerTipoId (@Id int)
+as
+begin
+select TipoContacto.Id, TipoContacto.Nombre, TipoContacto.Estado from TipoContacto
+where TipoContacto.Id = @Id
+end
+-------------------------Borrar Tipo--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Borrar Tipo
+create procedure spDeleteTipo (@Id int)
+as
+begin
+delete from TipoContacto where TipoContacto.Id = @Id
+end 
+-------------------------Crear Tipo--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Crear Tipo
+create procedure spCreateTipo ( @Nombre varchar(50), @Estado bit)
+as
+begin
+insert into TipoContacto values (@Nombre,@Estado);
+end
+-------------------------Editar Tipo--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Editar Tipo
+create procedure spEditTipo (@Id int,@Estado bit,@Nombre varchar(50))
+as
+begin
+update TipoContacto set TipoContacto.Nombre=@Nombre,TipoContacto.Estado=@Estado where TipoContacto.Id = @Id
+end
+------------------------------------------------------------
+spObtenerTipo
+spObtenerTipoId 1
+spDeleteTipo 5
+spCreateTipo 'Facebook', 1
+spEditTipo 1,1,Telefono

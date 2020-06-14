@@ -1,0 +1,82 @@
+-------------------------Obtener Referencia--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla Referencia 
+create procedure spObtenerReferencia
+as
+begin
+select Referencia.Id, Referencia.TipoId, Referencia.ContactoId, Referencia.Dato,
+       TipoContacto.Id as IdTipo, TipoContacto.Nombre, TipoContacto.Estado
+from Referencia
+ inner join
+  TipoContacto
+on Referencia.TipoId= TipoContacto.Id
+order by TipoContacto.Nombre
+end
+-------------------------Obtener Referencia Id--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla Referencia Id
+create procedure spObtenerReferenciaId (@Id int)
+as
+begin
+select Referencia.Id, Referencia.TipoId, Referencia.ContactoId, Referencia.Dato,
+       TipoContacto.Id as IdTipo, TipoContacto.Nombre, TipoContacto.Estado
+from Referencia
+ inner join
+  TipoContacto
+on Referencia.TipoId= TipoContacto.Id
+where Referencia.Id =@Id
+order by TipoContacto.Nombre
+end
+-------------------------Obtener Referencia Por ContactoId--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla Referencia Id
+create procedure spObtenerReferenciaContactoId (@Id int)
+as
+begin
+select Referencia.Id, Referencia.TipoId, Referencia.ContactoId, Referencia.Dato,
+       TipoContacto.Id as IdTipo, TipoContacto.Nombre, TipoContacto.Estado
+from Referencia
+ inner join
+  TipoContacto
+on Referencia.TipoId= TipoContacto.Id
+where Referencia.ContactoId =@Id
+order by TipoContacto.Nombre
+end
+-------------------------Borrar Referencia--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Borrar Referencia
+create procedure spDeleteReferencia (@Id int)
+as
+begin
+delete from Referencia where Referencia.Id = @Id
+end 
+-------------------------Crear Referencia--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Crear Referencia
+create procedure spCreateReferencia (@TipoId int, @ContactoId int, @Dato varchar(500))
+as
+begin
+insert into Referencia values (@TipoId , @ContactoId , @Dato);
+end
+-------------------------Editar Referencia--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Editar Referencia
+create procedure spEditReferencia (@Id int ,@TipoId int, @ContactoId int, @Dato varchar(500))
+as
+begin
+update Referencia set Referencia.TipoId = @TipoId, Referencia.ContactoId = @ContactoId,Referencia.Dato = @Dato where Referencia.Id = @Id
+end
+
+
+
+spObtenerReferencia
+spObtenerReferenciaId 3
+spDeleteReferencia 5
+spCreateReferencia 2,1,91124722
+spEditReferencia 3,3, 1, 'kdjkssf'

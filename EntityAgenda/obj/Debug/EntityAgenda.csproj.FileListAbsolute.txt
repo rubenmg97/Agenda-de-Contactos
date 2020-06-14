@@ -1,0 +1,11 @@
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\EntityAgenda\bin\Debug\EntityAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\EntityAgenda\bin\Debug\EntityAgenda.pdb
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.csprojResolveAssemblyReference.cache
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.dll
+C:\Users\Ruben mg\Documents\Visual Studio 2015\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\EntityAgenda\bin\Debug\EntityAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\EntityAgenda\bin\Debug\EntityAgenda.pdb
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.csprojAssemblyReference.cache
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.csproj.CoreCompileInputs.cache
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.dll
+C:\Users\ruben\Downloads\Projects\Funcionando\SolAgendaU\EntityAgenda\obj\Debug\EntityAgenda.pdb

@@ -1,0 +1,92 @@
+-------------------------Obtener Contacto--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla Contacto 
+create proc spObtenerContacto
+as
+begin
+select Contacto.Id, Contacto.Nombre, Contacto.Paterno, Contacto.Materno, Contacto.Nacimiento, Contacto.Edad, Contacto.NomFoto, Contacto.UserId From Contacto
+end
+-------------------------Obtener Contacto Id--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla Contacto 
+create proc spObtenerContactoId (@Id int)
+as
+begin
+select Contacto.Id, Contacto.Nombre, Contacto.Paterno, Contacto.Materno, Contacto.Nacimiento, Contacto.Edad, Contacto.NomFoto, Contacto.UserId  From Contacto
+where Contacto.Id=@Id
+end
+-------------------------Obtener Contacto Nombre--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Tabla Contacto Nombre
+create proc spObtenerContactoNom (@Nombre varchar(50),@Id int)
+as
+begin
+select Contacto.Id, Contacto.Nombre, Contacto.Paterno, Contacto.Materno, Contacto.Nacimiento, Contacto.Edad, Contacto.NomFoto, Contacto.UserId From Contacto
+where Contacto.Nombre like '%' + @Nombre + '%' or Contacto.Paterno  like '%' + @Nombre + '%' or Contacto.Materno  like '%' + @Nombre + '%' and Contacto.UserId = @Id
+order by Contacto.Nombre asc
+end
+
+
+-------------------------Obtener Contacto Existente--------------------------
+-- Mancilla G. Ruben
+-- 18/05/2020
+-- Obtener Existente de Tabla Usuario 
+create procedure spContactoExistente (@Nombre varchar(50),@Paterno varchar(50),@Materno varchar(50))
+as
+begin
+select Contacto.Id, Contacto.Nombre, Contacto.Paterno, Contacto.Materno, Contacto.Nacimiento, Contacto.Edad, Contacto.NomFoto, Contacto.UserId From Contacto
+where Contacto.Nombre = @Nombre and Contacto.Paterno = @Paterno and Contacto.Materno = @Materno
+end 
+-------------------------Borrar Contacto--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Borrar Contacto
+create procedure spDeleteContacto (@Id int)
+as
+begin
+delete from Contacto where Contacto.Id = @Id
+end 
+-------------------------Crear Contacto--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Crear Contacto
+create procedure spCreateContacto (@Nombre varchar(50), @Paterno varchar(50), @Materno varchar(50),@NomFoto varchar(50), @Nacimiento datetime,@UserId int)
+as
+begin                  
+insert into Contacto values (@Nombre, @Paterno, @Materno, @Nacimiento, (Select DATEDIFF(YEAR,@Nacimiento,GETDATE())-(CASE WHEN DATEADD(YY,DATEDIFF(YEAR,@Nacimiento,GETDATE()),@Nacimiento)>GETDATE() THEN   1 ELSE 0 END)) ,@NomFoto,@UserId);
+end
+-------------------------Editar Contacto--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Editar Contacto
+create procedure spEditContacto (@Id int , @Nombre varchar(50), @Paterno varchar(50), @Materno varchar(50),@NomFoto varchar(50), @Nacimiento datetime,@UserId int)
+as
+begin
+update Contacto set Contacto.Nombre=@Nombre, Contacto.Paterno=@Paterno, Contacto.Materno=@Materno, Contacto.Nacimiento=@Nacimiento, Contacto.Edad=(Select DATEDIFF(YEAR,@Nacimiento,GETDATE())-(CASE WHEN DATEADD(YY,DATEDIFF(YEAR,@Nacimiento,GETDATE()),@Nacimiento)>GETDATE() THEN   1 ELSE 0 END)), Contacto.NomFoto=@NomFoto, Contacto.UserId=@UserId
+where Contacto.Id=@Id
+end
+-------------------------Obtener Agenda Nombre--------------------------
+-- Mancilla Garcia Ruben
+-- 18/05/2020
+-- Obtener Agenda (Tablas Usuario-Contactos-Tipos)
+create proc SpObtenerIdUsuario (@Id int)
+as
+Begin
+
+Select Contacto.Id, Contacto.Nombre, Contacto.Paterno, Contacto.Materno, Contacto.Nacimiento, Contacto.Edad, Contacto.NomFoto, Contacto.UserId
+From Contacto
+where Contacto.UserId =@Id
+End
+----------------------------------------------------------------
+
+spObtenerContacto
+spObtenerContactoId 1
+spObtenerContactoNom 'jado'
+spContactoExistente 'Elmo','Jado','Martinez'
+spDeleteContacto 1003
+spCreateContacto 'Rodolfo','Lopez','juarez','cont.jpg','20120618',1
+spEditContacto 1004,'Rodolfo','Lopez','juarez','cont.jpg','20120618',2
+SpObtenerIdUsuario 2

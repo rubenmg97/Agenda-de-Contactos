@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaU", "AgendaU\AgendaU.csproj", "{6A19EA6D-41B0-4D53-93A3-CC73BD4E63B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IU", "IU", "{E1B4A2F4-D91D-4AA2-9987-B42CCBCBF8C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bussines", "Bussines", "{36BD7B05-9B30-410E-8174-A745B6E3574C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{1B4F2E87-60FB-44E1-AC08-8546ADD20F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinesAgenda", "BussinesAgenda\BussinesAgenda.csproj", "{004E4F39-7D03-4B58-B51E-B631DEBAD219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityAgenda", "EntityAgenda\EntityAgenda.csproj", "{C865C641-99A0-40EA-A2C0-C3D4D23DE207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAgenda", "DataAgenda\DataAgenda.csproj", "{D13CE2E8-5356-4C84-9885-B308D1D77C35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A19EA6D-41B0-4D53-93A3-CC73BD4E63B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A19EA6D-41B0-4D53-93A3-CC73BD4E63B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A19EA6D-41B0-4D53-93A3-CC73BD4E63B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A19EA6D-41B0-4D53-93A3-CC73BD4E63B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004E4F39-7D03-4B58-B51E-B631DEBAD219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004E4F39-7D03-4B58-B51E-B631DEBAD219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004E4F39-7D03-4B58-B51E-B631DEBAD219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004E4F39-7D03-4B58-B51E-B631DEBAD219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C865C641-99A0-40EA-A2C0-C3D4D23DE207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C865C641-99A0-40EA-A2C0-C3D4D23DE207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C865C641-99A0-40EA-A2C0-C3D4D23DE207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C865C641-99A0-40EA-A2C0-C3D4D23DE207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13CE2E8-5356-4C84-9885-B308D1D77C35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13CE2E8-5356-4C84-9885-B308D1D77C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13CE2E8-5356-4C84-9885-B308D1D77C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13CE2E8-5356-4C84-9885-B308D1D77C35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A19EA6D-41B0-4D53-93A3-CC73BD4E63B5} = {E1B4A2F4-D91D-4AA2-9987-B42CCBCBF8C6}
+		{004E4F39-7D03-4B58-B51E-B631DEBAD219} = {36BD7B05-9B30-410E-8174-A745B6E3574C}
+		{C865C641-99A0-40EA-A2C0-C3D4D23DE207} = {36BD7B05-9B30-410E-8174-A745B6E3574C}
+		{D13CE2E8-5356-4C84-9885-B308D1D77C35} = {1B4F2E87-60FB-44E1-AC08-8546ADD20F1A}
+	EndGlobalSection
+EndGlobal
