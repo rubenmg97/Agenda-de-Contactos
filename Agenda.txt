@@ -1,0 +1,99 @@
+CREATE DATABASE Agenda
+ON PRIMARY 
+(NAME = 'Agenda', 
+FILENAME = 'C:\AgendaData.mdf', 
+SIZE = 10, 
+MAXSIZE = 50, 
+FILEGROWTH = 5) 
+
+LOG ON 
+(NAME = 'AgendaLog', 
+FILENAME = 'C:\AgendaLog.ldf', 
+SIZE = 5, 
+MAXSIZE = 25, 
+FILEGROWTH = 5);
+GO
+use Agenda
+
+Create table Usuario
+(
+Id int primary key identity not null,
+Nombre varchar(50) not null,
+Paterno varchar(50) not null,
+Materno varchar(50) not null,
+NomUsuario varchar(50) not null,
+Nacimieto datetime not null,
+Nacimiento datetime not null,
+Edad int not null,
+Correo varchar(100) not null,
+Password varchar(50) not null,
+Facebook varchar(500) not null,
+Likedin varchar(500) not null,
+NomFoto varchar(50) not null,
+)
+GO 
+
+Create table Contacto
+(
+Id int primary key identity not null,
+Nombre varchar(50) not null,
+Paterno varchar(50) not null,
+Materno varchar(50) not null,
+Nacimiento datetime not null,
+Edad int not null,
+NomFoto varchar(50) not null,
+UserId int not null,
+
+CONSTRAINT FK_Contactos_de_Usuario
+FOREIGN KEY (UserId) REFERENCES Usuario(Id)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+)
+GO
+
+create table TipoContacto
+(
+Id int primary key Identity not null,
+Nombre varchar(50) not null,
+Estado bit not null,
+)
+GO
+
+Create table Referencia
+(
+Id Int primary key identity not null,
+TipoId  int not null,
+ContactoId int not null,
+Dato varchar(500) not null,
+
+CONSTRAINT FK_Detalle_Tipo_de_Contacto
+FOREIGN KEY (TipoId) REFERENCES TipoContacto(Id)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+
+CONSTRAINT FK_Detalle_Contacto
+FOREIGN KEY (ContactoId) REFERENCES Contacto(Id)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE
+)
+
+
+
+-- En Caso de querer alterar una tabla para agregar FK
+Use Agenda
+ALTER TABLE Referencia
+ADD CONSTRAINT FK_Detalle_Tipo_de_Contacto
+FOREIGN KEY (TipoId) REFERENCES TipoContacto(Id)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE,
+
+CONSTRAINT FK_Detalle_Contacto
+FOREIGN KEY (ContactoId) REFERENCES Contacto(Id)
+	ON UPDATE CASCADE
+	ON DELETE CASCADE
+	
+-- storeProcedure cant use
+-- @nombre as varchar(50)
+
+
+
